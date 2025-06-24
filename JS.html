@@ -1,0 +1,8 @@
+// Smooth scrolling behavior for nav links
+document.querySelectorAll('#nav-bar a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href'))
+      .scrollIntoView({ behavior: 'smooth' });
+  });
+});
